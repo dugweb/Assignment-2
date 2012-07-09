@@ -58,7 +58,7 @@
 
 - (IBAction)operationPressed:(UIButton *)sender 
 {
-	NSLog(@"operation cur title: %@", sender.currentTitle);
+	
 	if (self.userIsInTheMiddleOfEnteringANumber) [self enterPressed];
 	double result = [self.brain performOperation:sender.currentTitle];
 	NSString *resultString = [NSString stringWithFormat:@"%g", result];
@@ -92,7 +92,7 @@
 }
 
 - (IBAction)plusMinusPressed:(UIButton *) sender {
-	NSLog(@"sender current title: %g", sender.currentTitle);
+	
 	if (self.userIsInTheMiddleOfEnteringANumber) {
 		double result = [self.display.text doubleValue] * -1;
 		self.display.text = [NSString stringWithFormat:@"%g", result];
